@@ -1,5 +1,5 @@
-import React from "react";
-import SingleItem from "./single-item";
+import React from 'react';
+import SingleItem from './single-item';
 
 const ItemsList = (props) => {
   const { items } = props;

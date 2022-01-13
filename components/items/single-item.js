@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const SingleItem = (props) => {
+export default function SingleItem(props) {
   const { title, image, date, location, id } = props;
 
   const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
@@ -9,7 +9,7 @@ const SingleItem = (props) => {
     month: "long",
     year: "numeric",
   });
-  const formattedAddress = location.replace(", ", "\n");
+  const formattedAddress = location;
   const exploreLink = `/events/${id}`;
 
   return (
@@ -31,6 +31,4 @@ const SingleItem = (props) => {
       </div>
     </li>
   );
-};
-
-export default SingleItem;
+}
