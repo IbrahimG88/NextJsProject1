@@ -4,12 +4,6 @@ import { Fragment } from "react";
 import SingleItem from "../../components/items/single-item";
 import ItemsList from "../../components/items/items-list";
 
-export const TheItem = (props) => {
-  const { filteredEvents } = props;
-
-  return <p>{filteredEvents.description}</p>;
-};
-
 function FilteredEventsPage() {
   const router = useRouter();
   const filterData = router.query.slug;
@@ -43,7 +37,6 @@ function FilteredEventsPage() {
 
   return (
     <Fragment>
-      <TheItem filteredEvents={filteredEvents} />
       <ItemsList items={filteredEvents} />
     </Fragment>
   );
