@@ -38,3 +38,13 @@ export function getFeaturedItems() {
 export function getItemById(id) {
   return DUMMY_ITEMS.find((item) => item.id === id);
 }
+
+export function getFilteredEvents(eventFilter) {
+  const { id, title } = eventFilter;
+
+  let filteredEvents = DUMMY_ITEMS.filter((event) => {
+    return event.id === id && event.title === title;
+  });
+
+  return filteredEvents;
+}

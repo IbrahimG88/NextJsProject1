@@ -2,15 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 export default function SingleItem(props) {
-  const { title, image, date, location, id } = props;
+  const { title, image, description, id } = props;
 
-  const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-  const formattedAddress = location;
-  const exploreLink = `/events/${id}`;
+  const exploreLink = `/items/${id}`;
 
   return (
     <li>
@@ -18,15 +12,10 @@ export default function SingleItem(props) {
       <div>
         <div>
           <h2>{title}</h2>
-          <div>
-            <time>{humanReadableDate}</time>
-          </div>
-          <div>
-            <address>{formattedAddress}</address>
-          </div>
+          <p>{description}</p>
         </div>
         <div>
-          <Link href={exploreLink}>Explore Event</Link>
+          <Link href={exploreLink}>Explore Item</Link>
         </div>
       </div>
     </li>

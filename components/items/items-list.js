@@ -1,5 +1,5 @@
-import React from 'react';
-import SingleItem from './single-item';
+import React from "react";
+import SingleItem from "./single-item";
 
 const ItemsList = (props) => {
   const { items } = props;
@@ -11,9 +11,9 @@ const ItemsList = (props) => {
           key={item.id}
           id={item.id}
           title={item.title}
-          location={item.location}
           date={item.date}
           image={item.image}
+          description={item.description}
         />
       ))}
     </ul>
